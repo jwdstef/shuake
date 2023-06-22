@@ -385,10 +385,11 @@ def classSwitchExam(globalData):
             sleep(3)
             tab.click()
             WebDriverWait(browser, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "div[data-label='形考任务'].active")), message="切换tab失败")
-
+                EC.presence_of_element_located((By.CSS_SELECTOR, "div[data-label='形考任务'].active")), message="切换tab失败1")
+            # 展开隐藏元素
+            expendAllEle(browser)
             WebDriverWait(browser, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, ".learning-activity")), message="切换tab失败")
+                EC.presence_of_element_located((By.CSS_SELECTOR, ".learning-activity")), message="切换tab失败2")
             return True
     return False
 
